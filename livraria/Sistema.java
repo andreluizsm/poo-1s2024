@@ -8,7 +8,7 @@ public class Sistema {
         Scanner sc = new Scanner(System.in);
         int opcao = 0;
         Livraria livraria = new Livraria();
-
+             
         while (opcao != 4) {
             System.out.println("1 -  Adicionar livro");
             System.out.println("2 -  listar livros");
@@ -45,9 +45,15 @@ public class Sistema {
                     System.out.println("Listando Livros");
                     System.out.println(livraria.listarLivros());
                     break;
-                case 3:
-                    System.out.println("Detalhando Livro");
-                    break;
+                case 3: 
+                    System.out.println("Listando Livros:");
+                    System.out.println(livraria.listarLivros());
+                    System.out.println("Digite o ID do livro que deseja detalhar:");
+                    int idLivroDetalhar = sc.nextInt();
+                    sc.nextLine(); 
+                    System.out.println(livraria.detalharLivro(idLivroDetalhar));
+
+                break;
                 case 4:
                     System.out.println("Encerrando o sistema");
                     break;
@@ -58,7 +64,7 @@ public class Sistema {
             }
 
         }
-
+        
         sc.close();
 
     }

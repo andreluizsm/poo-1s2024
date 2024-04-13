@@ -21,4 +21,19 @@ public class Livraria {
         }
         return listaLivros;
     }
+
+    public String detalharLivro(int id) {
+        for (Livro l : this.livros) {
+            if (l.id == id) {
+                return "Detalhes do Livro:\n" +
+                       "ID: " + l.id + "\n" +
+                       "Título: " + l.titulo + "\n" +
+                       "Autor: " + l.nomeAutor + "\n" +
+                       "Ano de Publicação: " + l.anoPublicacao + "\n" +
+                       "Editora: " + l.editora + "\n";
+            }
+        }
+        return "Livro não encontrado.";
+    }
 }
+
