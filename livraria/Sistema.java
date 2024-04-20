@@ -19,26 +19,7 @@ public class Sistema {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Adicionando Livro");
-                    int id;
-                    String titulo;
-                    String nomeAutor;
-                    String anoPublicacao;
-                    String editora;
-                    
-                    System.out.println("Id: ");
-                    id = sc.nextInt();
-                    sc.nextLine();
-                    System.out.println("titulo: ");
-                    titulo = sc.nextLine();
-                    System.out.println("Autor: ");
-                    nomeAutor = sc.nextLine();
-                    System.out.println("Ano: ");
-                    anoPublicacao = sc.nextLine();
-                    System.out.println("Ediora: ");
-                    editora = sc.nextLine();
-
-                    Livro l  = new Livro(id, titulo, nomeAutor, anoPublicacao, editora);
+                    Livro l = criaLivro(sc);
                     livraria.cadastrarLivro(l);
                     break;
                 case 2:
@@ -68,4 +49,30 @@ public class Sistema {
         sc.close();
 
     }
+
+    public static Livro criaLivro(Scanner sc){
+        System.out.println("Adicionando Livro");
+        int id;
+        String titulo;
+        String nomeAutor;
+        String anoPublicacao;
+        String editora;
+        
+        System.out.println("Id: ");
+        id = sc.nextInt();
+        sc.nextLine();
+        System.out.println("titulo: ");
+        titulo = sc.nextLine();
+        System.out.println("Autor: ");
+        nomeAutor = sc.nextLine();
+        System.out.println("Ano: ");
+        anoPublicacao = sc.nextLine();
+        System.out.println("Ediora: ");
+        editora = sc.nextLine();
+
+        Livro l  = new Livro(id, titulo, nomeAutor, anoPublicacao, editora);
+        return l;
+    }
+
+    
 }
