@@ -1,13 +1,10 @@
 package heranca.empresa;
 
-public class Engenheiro {
-    
-    private String nome;
-    private Integer cpf;
-    private Integer telefone;
+public class Engenheiro extends Funcionario{
+
     private String crea;
     private String projeto;
-    private Double salario;
+
 
     private Engenheiro(){}
 
@@ -21,30 +18,7 @@ public class Engenheiro {
     }
     
 
-    public String getNome(){
-        return this.nome;
-    }
 
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-
-
-    public Integer getCpf() {
-        return this.cpf;
-    }
-
-    public void setCpf(Integer cpf) {
-        this.cpf = cpf;
-    }
-
-    public Integer getTelefone() {
-        return this.telefone;
-    }
-
-    public void setTelefone(Integer telefone) {
-        this.telefone = telefone;
-    }
 
     public String getCrea() {
         return this.crea;
@@ -60,14 +34,6 @@ public class Engenheiro {
 
     public void setProjeto(String projeto) {
         this.projeto = projeto;
-    }
-
-    public Double getSalario() {
-        return this.salario;
-    }
-
-    public void setSalario(Double salario) {
-        this.salario = salario;
     }
 
     public Double getBonificacao(){
