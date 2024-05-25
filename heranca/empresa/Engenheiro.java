@@ -9,17 +9,10 @@ public class Engenheiro extends Funcionario{
     private Engenheiro(){}
 
     public Engenheiro(String nome, Integer cpf, Integer telefone, String crea, String projeto, Double salario){
-        this.nome = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
         this.crea = crea;
         this.projeto = projeto;
-        this.salario = salario;
     }
     
-
-
-
     public String getCrea() {
         return this.crea;
     }
